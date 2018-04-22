@@ -1,0 +1,86 @@
+﻿<!--
+    #authors:   Kaleb Eberhart
+    #date:      04/20/2018
+    #course:    CST-247
+    #professor: Mark Reha
+    #project:   Benchmark v.1
+    #file:      Search.cshtml
+    #revision:  1.0
+    #synapsis:  This view contains the form and form elements for the user to search
+                for a bible verse. Having the books in a dropdown list would be ideal;
+                however, that would required a lot of header code and I already have
+                a lot. If this were an application I was actually making to be used
+                professionally or commercially, I would make the books into a dropdown.
+-->
+@model Benchmark.Models.VerseModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //List that contains the testament of the verse.
+    List<SelectListItem> listTest = new List<SelectListItem>();
+    listTest.Add(new SelectListItem
+    {
+        Text = "Old Testament",
+        Value = "Old"
+    });
+    listTest.Add(new SelectListItem
+    {
+        Text = "New Testament",
+        Value = "New"
+    });
+
+    //List that contains the chapter selection. This goes up to 150
+    //because Psalm has the most chapters in the bible and it has
+    //150
+    List<SelectListItem> listChap = new List<SelectListItem>();
+    for (int i = 1; i <= 150; i++)
+    {
+        listChap.Add(new SelectListItem
+        {
+            Text = i.ToString(),
+            Value = i.ToString()
+        });
+    }
+
+    //List that contains the verse selection. This goes up to 176
+    //because the longest chapter in the bible has 176 verses.
+    List<SelectListItem> listVerse = new List<SelectListItem>();
+    for (int i = 1; i <= 176; i++)
+    {
+        listVerse.Add(new SelectListItem
+        {
+            Text = i.ToString(),
+            Value = i.ToString()
+        });
+    }
+}
+<html>
+<body>
+    <div style="min-height:86vh;" align="center">
+        <h1>Verse Search</h1>
+        <hr />
+        @using (Html.BeginForm("Search", "Search", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.DropDownListFor(model => model.Testament, listTest)
+            <hr />
+            @Html.Label("Book")
+            @: :&nbsp
+            @Html.EditorFor(model => model.Book, new { htmlAttributes = new { style = "width:100px;" } })
+            <br />
+            @Html.ValidationMessageFor(model => model.Book, "", new { @class = "text-danger" })
+            <hr />
+            @Html.Label("Chapter")
+            @: :&nbsp
+            @Html.DropDownListFor(model => model.Chapter, listChap)
+            <hr />
+            @Html.Label("Verse")
+            @: :&nbsp
+            @Html.DropDownListFor(model => model.Verse, listVerse)
+            <br /><br />
+            <button class="btn btn-success" type="submit">Search</button>
+        }
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+﻿<!--
+    #authors:   Kaleb Eberhart
+    #date:      04/20/2018
+    #course:    CST-247
+    #professor: Mark Reha
+    #project:   Benchmark v.1
+    #file:      SearchResults.cshtml
+    #revision:  1.0
+    #synapsis:  This view displays the results of the user's search if any
+                are available. All bible verses are displayed in the King
+                James Version.
+-->
+@model List<string>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<body>
+    <div style="min-height:86vh;" align="center">
+        <h1>Search Results</h1>
+        <hr />
+        @if (Model[0] == "No results found!")
+        {
+            <h3>@Model[0]</h3>
+        }
+        else
+        {
+            <h2>King James Version</h2><hr />
+            <h4>Testament: @Model[0]</h4><hr />
+            <h4>Book: @Model[1]</h4><hr />
+            <h4>Chapter: @Model[2]</h4><hr />
+            <h4>Verse: @Model[3]</h4><hr />
+            <h4>@Model[1] @Model[2]:@Model[3]- @Model[4]</h4>
+        }
+    </div>
+</body>
+</html>

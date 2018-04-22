@@ -1,0 +1,27 @@
+﻿<!--
+    #authors:   Kaleb Eberhart
+    #date:      04/20/2018
+    #course:    CST-247
+    #professor: Mark Reha
+    #project:   Benchmark v.1
+    #file:      _NavBar.cshtml
+    #revision:  1.0
+    #synapsis:  This partial view is used to display the navbar at the top of each page.
+                This navbar doesn't change anywhere in the application.
+-->
+<div>
+    <nav class="navbar navbar-default navigation-clean" style="background-color:#000000;">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-link" href="~/Home" style="color:#ffffff;">Bible Search</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation"><a href="~/Search" style="color:#ffffff;">Verse Search</a></li>
+                    <li role="presentation"><a href="~/Insert" style="color:#ffffff;">Verse Input</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

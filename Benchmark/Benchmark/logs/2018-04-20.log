@@ -1,0 +1,14 @@
+2018-04-20 23:40:34.1926 INFO User invoked SearchVerses method in the VerseService class
+2018-04-20 23:40:34.2312 INFO User search returned the verse: For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.. (Note this will fail if the user's search did not yield results).
+2018-04-20 23:40:40.5563 INFO User invoked SearchVerses method in the VerseService class
+2018-04-20 23:40:40.5639 INFO User search returned the verse: The book of the generation of Jesus Christ, the son of David, the son of Abraham.. (Note this will fail if the user's search did not yield results).
+2018-04-20 23:41:24.2589 INFO User invoked SearchVerses method in the VerseService class
+2018-04-20 23:42:48.4859 INFO User invoked SearchVerses method in the VerseService class
+2018-04-20 23:42:48.5245 INFO User's search yielded 0 results
+2018-04-20 23:42:58.7965 INFO User invoked SearchVerses method in the VerseService class
+2018-04-20 23:42:58.8078 INFO User search returned the verse: For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.. (Note this will fail if the user's search did not yield results).
+2018-04-20 23:54:48.1070 DEBUG User invoked SearchVerses method in the VerseService class
+2018-04-20 23:54:48.1325 INFO Invoked SearchVerse method in the verse DAO
+2018-04-20 23:54:48.7749 INFO Leaving SearchVerse method with no results
+2018-04-20 23:54:48.7830 INFO User's search yielded 0 results
+2018-04-20 23:54:48.7830 INFO Leaving SearchVerses method in service

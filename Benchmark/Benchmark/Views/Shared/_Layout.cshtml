@@ -1,0 +1,19 @@
+﻿<!--
+    #authors:   Kaleb Eberhart
+    #date:      04/20/2018
+    #course:    CST-247
+    #professor: Mark Reha
+    #project:   Benchmark v.1
+    #file:      _Layout.cshtml
+    #revision:  1.0
+    #synapsis:  This is the layout for each view used in this benchmark.
+-->
+<!DOCTYPE html>
+<html>
+@RenderPage("~/Views/Shared/_HeaderFiles.cshtml")
+<body>
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+    @RenderBody()
+    @RenderPage("~/Views/Shared/_Footer.cshtml")
+</body>
+</html>
